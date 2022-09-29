@@ -20,7 +20,7 @@ public class MaximumTripletSum7kyu {
             //A declaracao abaixo, e uma boa pratica, contudo voce deve se atentar em nao manipular valores inteiros direto no veto posicao numbers[i] (sinal de pessma pratica).
             int numero = numbers[i];
             if (numero == maiorA || numero == maiorB || numero == maiorC) {
-            numero = Integer.MIN_VALUE;
+                numero = Integer.MIN_VALUE;
             }
             if (numero > maiorA) {
                 maiorC = maiorB;
