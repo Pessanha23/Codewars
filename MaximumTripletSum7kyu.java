@@ -13,14 +13,14 @@ public class MaximumTripletSum7kyu {
     }
 
     public static int maxTriSum(int[] numbers) {
-        int maiorA = -1000000;
-        int maiorB = -1000000;
-        int maiorC = -1000000;
+        int maiorA = Integer.MIN_VALUE;
+        int maiorB = Integer.MIN_VALUE;
+        int maiorC = Integer.MIN_VALUE;
         for (int i = 0; i < numbers.length; i++) {
             //A declaracao abaixo, e uma boa pratica, contudo voce deve se atentar em nao manipular valores inteiros direto no veto posicao numbers[i] (sinal de pessma pratica).
             int numero = numbers[i];
             if (numero == maiorA || numero == maiorB || numero == maiorC) {
-            numero = -1000000;
+            numero = Integer.MIN_VALUE;
             }
             if (numero > maiorA) {
                 maiorC = maiorB;
