@@ -17,18 +17,20 @@ public class MaximumTripletSum7kyu {
         int maiorB = -1000000;
         int maiorC = -1000000;
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == maiorA || numbers[i] == maiorB || numbers[i] == maiorC) {
-            numbers[i] = -1000000;
+            //A declaracao abaixo, e uma boa pratica, contudo voce deve se atentar em nao manipular valores inteiros direto no veto posicao numbers[i] (sinal de pessma pratica).
+            int numero = numbers[i];
+            if (numero == maiorA || numero == maiorB || numero == maiorC) {
+            numero = -1000000;
             }
-            if (numbers[i] > maiorA) {
+            if (numero > maiorA) {
                 maiorC = maiorB;
                 maiorB = maiorA;
-                maiorA = numbers[i];
-            } else if (numbers[i] > maiorB) {
+                maiorA = numero;
+            } else if (numero > maiorB) {
                 maiorC = maiorB;
-                maiorB = numbers[i];
-            } else if (numbers[i] > maiorC) {
-                maiorC = numbers[i];
+                maiorB = numero;
+            } else if (numero > maiorC) {
+                maiorC = numero;
             }
         }
         return (maiorA + maiorB + maiorC);
