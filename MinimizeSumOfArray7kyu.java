@@ -12,6 +12,7 @@ public class MinimizeSumOfArray7kyu {
     public static int minSum(int[] passed) {
         Arrays.sort(passed);
         int soma = 0;
+        // Metodo importante [passed.length-1-i] que serve para fazer que o menor seja multiplicado pelo maior.
         for (int i = 0; i < passed.length/2; i++) {
         soma += passed[i] * passed[passed.length -1 -i];
         }
