@@ -26,6 +26,29 @@ public class ComplementaryDNA7kyu {
         }
         return receba.toString();
     }
+    /*
+    Other solution for this exercise, is interested
+    String result = "";
+
+     for(char c : dna.toCharArray()){
+       switch(c){
+         case 'A':
+           result += 'T';
+           break;
+         case 'T':
+           result += 'A';
+           break;
+         case 'G':
+           result += 'C';
+           break;
+         case 'C':
+           result += 'G';
+           break;
+       }
+     }
+     return result;
+
+     */
 
     public static void showResults(String value) {
         System.out.println(value);
